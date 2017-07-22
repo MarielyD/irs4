@@ -20,5 +20,49 @@
   <%= @company.phone %>
 </p>
 
+<p>
+  <strong>Partners:</strong>
+  <%= @company.partners %>
+</p>
+
+<p>
+  <strong>Many Partners:</strong>
+  <%= @company.manypartners %>
+</p>
+
+<p>
+  <strong>Corporation:</strong>
+  <%= @company.corporation %>
+</p>
+
+<p>
+  <strong>S Corp:</strong>
+  <%= @company.scorp %>
+</p>
+
+<p>
+  <strong>LLC:</strong>
+  <%= @company.llc %>
+</p>
+
+<p>
+  <strong>Sole Prop:</strong>
+  <%= @company.soleprop %>
+</p>
+
+<p>
+  <strong>Employees:</strong>
+  <%= @company.employees %>
+</p>
+
+<p>
+  <strong>Employee Benefits:</strong>
+  <%= @company.employeebenefits %>
+</p>
+
+<p>
+  <strong>Contractors:</strong>
+  <%= @company.contractors %>
+</p>
 <%= link_to 'Edit', edit_company_path(@company) %> |
 <%= link_to 'Back', companies_path %>
