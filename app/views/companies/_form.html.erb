@@ -86,6 +86,42 @@
     <%= form.check_box :contractors, id: :company_contractors %>
   </div>
 
+  <div class="field">
+    <% form.label :incomeproperties %>
+    Does your company own income properties?
+    <%= form.check_box :incomeproperties, id: :company_incomeproperties %>
+  </div>
+
+  <div class="field">
+    <% form.label :ff %>
+    Is your company in the Farming or Fishing industry?
+    <%= form.check_box :ff, id: :company_ff %>
+  </div>
+
+  <div class="field">
+    <% form.label :wagering %>
+    Does your company operate a casino, involved in gambling, or wagering?
+    <%= form.check_box :wagering, id: :company_wagering %>
+  </div>
+
+  <div class="field">
+    <% form.label :excisetax %>
+    Does your company sell any of the following gas, fuel, tractors, air or trip transportation services, insurance policies issued by foreign companies, fishing equipment, electric outdoor motors or bows and arrows, alcohol, tabacco, or firearms?
+    <%= form.check_box :excisetax, id: :company_excisetax %>
+  </div>
+
+  <div class="field">
+    <% form.label :trucking %>
+    Does your company own a vehicle with a taxable gross weight of 55,000 pounds or more?
+    <%= form.check_box :trucking, id: :company_trucking %>
+  </div>
+
+  <div class="field">
+    <% form.label :agriculture %>
+    Does your company employ agricultural workers?
+    <%= form.check_box :agriculture, id: :company_agriculture %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

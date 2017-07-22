@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170722222119) do
+ActiveRecord::Schema.define(version: 20170722231118) do
 
   create_table "companies", force: :cascade do |t|
     t.integer "user_id"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20170722222119) do
     t.boolean "employees"
     t.boolean "employeebenefits"
     t.boolean "contractors"
+    t.boolean "incomeproperties"
+    t.boolean "ff"
+    t.boolean "wagering"
+    t.boolean "excisetax"
+    t.boolean "trucking"
+    t.boolean "agriculture"
     t.index ["user_id"], name: "index_companies_on_user_id"
   end
 
