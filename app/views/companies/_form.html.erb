@@ -17,7 +17,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :name %>
+    Company Name<br>
+    <% form.label :name %>
     <%= form.text_field :name, id: :company_name %>
   </div>
 
@@ -29,6 +30,96 @@
   <div class="field">
     <%= form.label :phone %>
     <%= form.text_field :phone, id: :company_phone %>
+  </div>
+
+  <div class="field">
+    <% form.label :partners %>
+    Do you have any partners?
+    <%= form.check_box :partners, id: :company_partners %>
+  </div>
+
+  <div class="field">
+    <% form.label :manypartners %>
+    Do you have more than 100 partners?
+    <%= form.check_box :manypartners, id: :company_manypartners %>
+  </div>
+
+  <div class="field">
+    <% form.label :corporation %>
+    Is your company a corporation?
+    <%= form.check_box :corporation, id: :company_corporation %>
+  </div>
+
+  <div class="field">
+    <% form.label :scorp %>
+    Is your company an S corp?
+    <%= form.check_box :scorp, id: :company_scorp %>
+  </div>
+
+  <div class="field">
+    <% form.label :llc %>
+    Is your company an LLC?
+    <%= form.check_box :llc, id: :company_llc %>
+  </div>
+
+  <div class="field">
+    <% form.label :soleprop %>
+    Is your company a Sole Prop?
+    <%= form.check_box :soleprop, id: :company_soleprop %>
+  </div>
+
+  <div class="field">
+    <% form.label :employees %>
+    Does your company have employees?
+    <%= form.check_box :employees, id: :company_employees %>
+  </div>
+
+  <div class="field">
+    <% form.label :employeebenefits %>
+    Does your company offer employee benefits?
+    <%= form.check_box :employeebenefits, id: :company_employeebenefits %>
+  </div>
+
+  <div class="field">
+    <% form.label :contractors %>
+    Does your company have contractors?
+    <%= form.check_box :contractors, id: :company_contractors %>
+  </div>
+
+  <div class="field">
+    <% form.label :incomeproperties %>
+    Does your company own income properties?
+    <%= form.check_box :incomeproperties, id: :company_incomeproperties %>
+  </div>
+
+  <div class="field">
+    <% form.label :ff %>
+    Is your company in the Farming or Fishing industry?
+    <%= form.check_box :ff, id: :company_ff %>
+  </div>
+
+  <div class="field">
+    <% form.label :wagering %>
+    Does your company operate a casino, involved in gambling, or wagering?
+    <%= form.check_box :wagering, id: :company_wagering %>
+  </div>
+
+  <div class="field">
+    <% form.label :excisetax %>
+    Does your company sell any of the following gas, fuel, tractors, air or trip transportation services, insurance policies issued by foreign companies, fishing equipment, electric outdoor motors or bows and arrows, alcohol, tabacco, or firearms?
+    <%= form.check_box :excisetax, id: :company_excisetax %>
+  </div>
+
+  <div class="field">
+    <% form.label :trucking %>
+    Does your company own a vehicle with a taxable gross weight of 55,000 pounds or more?
+    <%= form.check_box :trucking, id: :company_trucking %>
+  </div>
+
+  <div class="field">
+    <% form.label :agriculture %>
+    Does your company employ agricultural workers?
+    <%= form.check_box :agriculture, id: :company_agriculture %>
   </div>
 
   <div class="actions">

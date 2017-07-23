@@ -9,6 +9,21 @@
       <th>Company Name</th>
       <th>Email</th>
       <th>Phone</th>
+      <th>Partners</th>
+      <th>Many Partners</th>
+      <th>Corporation</th>
+      <th>S Corp</th>
+      <th>LLC</th>
+      <th>Sole Prop</th>
+      <th>Employees</th>
+      <th>Employee Benefits</th>
+      <th>Contractors</th>
+      <th>Income Properties</th>
+      <th>Fishing and Farming</th>
+      <th>Wagering</th>
+      <th>Excise Tax</th>
+      <th>Trucking</th>
+      <th>Agriculture</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +35,21 @@
         <td><%= company.name %></td>
         <td><%= company.email %></td>
         <td><%= company.phone %></td>
+        <td><%= company.partners %></td>
+        <td><%= company.manypartners %></td>
+        <td><%= company.corporation %></td>
+        <td><%= company.scorp %></td>
+        <td><%= company.llc %></td>
+        <td><%= company.soleprop %></td>
+        <td><%= company.employees %></td>
+        <td><%= company.employeebenefits %></td>
+        <td><%= company.contractors %></td>
+        <td><%= company.incomeproperties %></td>
+        <td><%= company.ff %></td>
+        <td><%= company.wagering %></td>
+        <td><%= company.excisetax %></td>
+        <td><%= company.trucking %></td>
+        <td><%= company.agriculture %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>
         <td><%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %></td>
