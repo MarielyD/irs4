@@ -1,3 +1,4 @@
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170723175416) do
+ActiveRecord::Schema.define(version: 20170723175137) do
 
   create_table "companies", force: :cascade do |t|
     t.integer "user_id"
@@ -37,13 +38,11 @@ ActiveRecord::Schema.define(version: 20170723175416) do
     t.index ["user_id"], name: "index_companies_on_user_id"
   end
 
-  create_table "company_forms", force: :cascade do |t|
-    t.integer "company_id"
-    t.integer "form_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["company_id"], name: "index_company_forms_on_company_id"
-    t.index ["form_id"], name: "index_company_forms_on_form_id"
+  create_table "companies_forms", id: false, force: :cascade do |t|
+    t.integer "company_id", null: false
+    t.integer "form_id", null: false
+    t.index ["company_id", "form_id"], name: "index_companies_forms_on_company_id_and_form_id"
+    t.index ["form_id", "company_id"], name: "index_companies_forms_on_form_id_and_company_id"
   end
 
   create_table "forms", force: :cascade do |t|
