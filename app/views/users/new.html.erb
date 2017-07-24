@@ -1,19 +1,28 @@
-<h1>Users#New</h1>
-<h2>Sign Up</h2>
-<%= form_for @user do |f| %>
-  <p>
-    <%= f.label :username %>
-    <%= f.text_field :username %>
-  </p>
-  <p>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end  %>
+<div class="nav jumbotron">
+  <div class="container">
+    <h1>Tax Alert</h1>
+  </div>
+</div>
+
+<div class="container jumbotron col-sm-6">
+  <h2>Sign Up</h2>
+  <%= form_for @user do |f| %>
+    <p>
+      <%= f.label :username %>
+      <%= f.text_field :username %>
+    </p>
+    <p>
+      <%= f.label :password %>
+      <%= f.password_field :password %>
+    </p>
+    <p>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+    Already signed up?
+      <%= link_to 'Log in here', root_path %>
+  <% end  %>
+</div>
