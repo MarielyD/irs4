@@ -1,24 +1,25 @@
-<div class="nav jumbotron">
+<div class="nav navbar navbar-default">
   <div class="container">
     <h1>Tax Alert</h1>
   </div>
 </div>
-<div class="container jumbotron col-sm-6">
-  <h2>Log in</h2>
-<%= form_tag sessions_path do %>
-  <p>
-    <%= label_tag :username %>
-    <%= text_field_tag :username %>
-  </p>
-  <p>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-  </p>
-  <p>
-    <%= submit_tag 'Log in' %>
-  </p>
-  Don't have an account?
-    <%= link_to 'Sign Up Here', users_new_path %>
-<% end  %>
-
+<div class="row container jumbotron">
+  <div class="col-sm-6">
+    <h2>Log in</h2>
+      <%= form_tag sessions_path do %>
+        <p>
+          <%= label_tag :username %>
+          <%= text_field_tag :username %>
+        </p>
+        <p>
+          <%= label_tag :password %>
+          <%= password_field_tag :password %>
+        </p>
+        <p>
+          <%= submit_tag 'Log in' %>
+        </p>
+        Don't have an account?
+          <%= link_to 'Sign up here.', users_new_path %>
+      <% end  %>
+  </div>
 </div>
