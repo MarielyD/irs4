@@ -11,28 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <!-- <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id, id: :company_user_id %>
-  </div>
+  </div> -->
 
   <div class="field">
-    Company Name<br>
+    <p class="lead">Company Name</p>
     <% form.label :name %>
-    <%= form.text_field :name, id: :company_name %>
+    <%= form.text_field :name, id: :company_name, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email, id: :company_email %>
+    <p class="lead">Email</p>
+    <% form.label :email %>
+    <%= form.text_field :email, id: :company_email, class: "form-control" %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
-    <%= form.text_field :phone, id: :company_phone %>
+    <p class="lead">Phone</p>
+    <% form.label :phone %>
+    <%= form.text_field :phone, id: :company_phone, class: "form-control" %>
   </div>
 
-  What type of company are you?
+  <p class="lead">What type of company are you?</p>
 
   <div class="field">
     <% form.label :corporation %>
