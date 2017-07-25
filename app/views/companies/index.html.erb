@@ -1,19 +1,13 @@
-<div class="nav navbar navbar-default">
-  <div class="container">
-    <h1>Tax Alert</h1>
-  </div>
-</div>
-
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-  <%= link_to 'Create a new company', new_company_path %>
+<div class="row">
+  <div class="container jumbotron create ">
+    <%= link_to 'Create a new company', new_company_path %>
+  </div>
 </div>
-
-
 <div class="row">
   <% @companies.each do |company| %>
-  <div class="container col-md-4 jumbotron">
+  <div class="container jumbotron">
 
     <p>Company: <%= company.name %></p>
     <%= link_to 'Show', company %>
