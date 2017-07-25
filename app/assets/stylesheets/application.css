@@ -17,8 +17,8 @@
  .nav {
    color: white;
    text-shadow: 2px 2px 4px black;
-   background-color: crimson;
-   border: solid 16px;
-   border-color: brown;
+   background-color: darkblue;
+   border: solid 12px;
+   border-color: blue;
    text-align: center;
  }
