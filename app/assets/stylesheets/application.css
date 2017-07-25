@@ -16,7 +16,7 @@
 
  .nav {
    color: white;
-   text-shadow: 2px 2px 4px black;
+   /*text-shadow: 2px 2px 4px black;*/
    background-color: #0081c2;
    /*border: solid 12px;
    border-color: blue;*/
@@ -33,4 +33,9 @@ img.taxifylogo{
 .container-header{
   margin-top: 10px;
   margin-left: 50px;
+}
+.header{
+  color: white;
+  float: right;
+  margin-right: 40px;
 }
