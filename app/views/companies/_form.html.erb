@@ -35,19 +35,25 @@
   What type of company are you?
 
   <div class="field">
+
     <% form.label :corporation %>
     Corporation
     <%= form.check_box :corporation, id: :company_corporation %>
+
     <% form.label :scorp %>
     S corp
     <%= form.check_box :scorp, id: :company_scorp %>
+
     <% form.label :llc %>
      LLC
     <%= form.check_box :llc, id: :company_llc %>
+
     <% form.label :soleprop %>
     Sole Prop
     <%= form.check_box :soleprop, id: :company_soleprop %>
+
   </div>
+
   <br>
       Do you have any partners? (Select all that apply)
   <div class="field">

@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  include CompaniesHelper
   helper_method :current_user
 
   def current_user
@@ -9,5 +10,5 @@ class ApplicationController < ActionController::Base
   def require_logged_in
     return true if current_user
     return redirect_to root_path
-  end 
+  end
 end

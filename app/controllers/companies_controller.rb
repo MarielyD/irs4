@@ -1,5 +1,5 @@
 class CompaniesController < ApplicationController
-  before_action :set_company, only: [:show, :edit, :update, :destroy]
+  before_action :set_company, only: [:show, :edit, :update, :destroy, :form_allocation]
   before_action :require_logged_in
 
   # GET /companies
@@ -26,9 +26,9 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = current_user.companies.new(company_params)
-
+    form_allocation(@company)
     respond_to do |format|
-      if @company.save
+      if @company.save!
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
       else
@@ -43,6 +43,7 @@ class CompaniesController < ApplicationController
   def update
     respond_to do |format|
       if @company.update(company_params)
+        form_allocation(@company)
         format.html { redirect_to @company, notice: 'Company was successfully updated.' }
         format.json { render :show, status: :ok, location: @company }
       else
@@ -62,6 +63,8 @@ class CompaniesController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_company
@@ -72,4 +75,5 @@ class CompaniesController < ApplicationController
     def company_params
       params.require(:company).permit(:name, :email, :phone, :partners, :manypartners, :corporation, :scorp, :llc, :soleprop, :employees, :employeebenefits, :contractors, :incomeproperties, :ff, :wagering, :excisetax, :trucking, :agriculture )
     end
+
 end
