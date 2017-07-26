@@ -131,5 +131,8 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 .field{
-  text-align: center; 
+  text-align: center;
+}
+.actions{
+  text-align: center;
 }
