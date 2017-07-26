@@ -24,6 +24,11 @@
    margin-top: 100px;
  }
 
+ h1{
+   text-align: center;
+   padding-bottom: 35px;
+ }
+
 img.taxifylogo{
   float: left;
 }
@@ -40,6 +45,9 @@ img.taxifylogo{
 }
 
 .col-xs-3{
+  text-align: center;
+}
+.col-sm-4{
   text-align: center;
 }
 

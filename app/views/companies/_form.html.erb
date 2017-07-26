@@ -73,35 +73,63 @@
   <br>
     <p class="lead">Do you have any partners? (Select all that apply)<p>
   <div class="field">
-
-    <% form.label :partners %>
-    Yes, I have partners.
-    <%= form.check_box :partners, id: :company_partners %>
-    <% form.label :manypartners %>
-    I have more than 100 partners?
-    <%= form.check_box :manypartners, id: :company_manypartners %>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-4">
+            		<div class="row">
+            			<div class="col-sm-4">
+                    <%= image_tag("partners.png", :alt => "partnerspic", size: "80x80", class:"partnerspic") %>
+                    <% form.label :partners %>
+                    <p>Yes, I have partners.</p>
+                    <br>
+                    <%= form.check_box :partners, id: :company_partners %>
+            			</div>
+            			<div class="col-sm-4">
+            				<%= image_tag("manypartners.png", :alt => "manypartners", size: "80x80", class:"manypartners") %>
+                    <% form.label :manypartners %>
+                    <p>I have more than 100 partners.</p>
+                    <%= form.check_box :manypartners, id: :company_manypartners %>
+            			</div>
+            		</div>
+            </div>
+        </div>
+    </div>
   </div>
   <br>
 
-    Do you have employees? (Select all that apply)
-
-  <div class="field">
-    <% form.label :employees %>
-    Yes, I have employees.
-    <%= form.check_box :employees, id: :company_employees %>
-
-    <% form.label :employeebenefits %>
-    I offer my employees benefits.
-    <%= form.check_box :employeebenefits, id: :company_employeebenefits %>
-
-    <% form.label :contractors %>
-    I have contractors.
-    <%= form.check_box :contractors, id: :company_contractors %>
-
-    <% form.label :agriculture %>
-    I employ agricultural workers.
-    <%= form.check_box :agriculture, id: :company_agriculture %>
-  </div>
+    <p class="lead">Do you have employees? (Select all that apply)</p>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+            		<div class="row">
+            			<div class="col-xs-3">
+                    <%= image_tag("employees.png", :alt => "employees", size: "80x80", class:"employees") %>
+                    <% form.label :employees %>
+                    <p>Yes, I have employees.</p>
+                    <%= form.check_box :employees, id: :company_employees %>
+            			</div>
+            			<div class="col-xs-3">
+            				<%= image_tag("benefits.png", :alt => "benefits", size: "80x80", class:"benefits") %>
+                    <% form.label :employeebenefits %>
+                    <p>I offer employee benefits.</p>
+                    <%= form.check_box :employeebenefits, id: :company_employeebenefits %>
+            			</div>
+            			<div class="col-xs-3">
+            				<%= image_tag("contractors.png", :alt => "contractors", size: "80x80", class:"contractors") %>
+                    <% form.label :contractors %>
+                    <p>I have contractors.</p>
+                    <%= form.check_box :contractors, id: :company_contractors %>
+            			</div>
+            			<div class="col-xs-3">
+            				<%= image_tag("agriculture.png", :alt => "agriculture", size: "80x80", class:"agriculture") %>
+                    <% form.label :agriculture %>
+                    <p>I employ agricultural workers.</p>
+                    <%= form.check_box :agriculture, id: :company_agriculture %>
+            			</div>
+            		</div>
+            </div>
+        </div>
+    </div>
   <br>
 
 
