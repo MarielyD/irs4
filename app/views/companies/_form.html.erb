@@ -33,25 +33,45 @@
     <% form.label :phone %>
     <%= form.text_field :phone, id: :company_phone, class: "form-control" %>
   </div>
-
-  <p class="lead">What type of company are you?</p>
-
-  <div class="field">
-    <% form.label :corporation %>
-    Corporation
-    <%= form.check_box :corporation, id: :company_corporation %>
-    <% form.label :scorp %>
-    S corp
-    <%= form.check_box :scorp, id: :company_scorp %>
-    <% form.label :llc %>
-     LLC
-    <%= form.check_box :llc, id: :company_llc %>
-    <% form.label :soleprop %>
-    Sole Prop
-    <%= form.check_box :soleprop, id: :company_soleprop %>
-  </div>
   <br>
-      Do you have any partners? (Select all that apply)
+  <br>
+  <p class="lead">What type of company are you?</p>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+        		<div class="row">
+        			<div class="col-xs-3">
+                <%= image_tag("corp.png", :alt => "corplogo", size: "80x80", class:"corplogo") %>
+                <% form.label :corporation %>
+                <p>Corporation</p>
+        				<%= form.check_box :corporation, id: :company_corporation, class:"corpbutton" %>
+        			</div>
+        			<div class="col-xs-3">
+        				<%= image_tag("scorp.png", :alt => "scorplogo", size: "80x80", class:"scorplogo") %>
+                <% form.label :scorp %>
+                <p>S corp</p>
+                <%= form.check_box :scorp, id: :company_scorp %>
+        			</div>
+        			<div class="col-xs-3">
+        				<%= image_tag("llc.png", :alt => "llclogo", size: "80x80", class:"llclogo") %>
+                <% form.label :llc %>
+                 <p>LLC</p>
+                <%= form.check_box :llc, id: :company_llc %>
+        			</div>
+        			<div class="col-xs-3">
+        				<%= image_tag("soleprop.png", :alt => "soleproplogo", size: "80x80", class:"soleproplogo") %>
+                <% form.label :soleprop %>
+                <p>Sole Prop</p>
+                <%= form.check_box :soleprop, id: :company_soleprop %>
+        			</div>
+        		</div>
+        </div>
+    </div>
+</div>
+
+  <br>
+    <p class="lead">Do you have any partners? (Select all that apply)<p>
   <div class="field">
 
     <% form.label :partners %>

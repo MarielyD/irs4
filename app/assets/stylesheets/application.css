@@ -16,16 +16,14 @@
 
  .nav {
    color: white;
-   /*text-shadow: 2px 2px 4px black;*/
    background-color: #0081c2;
-   /*border: solid 12px;
-   border-color: blue;*/
    text-align: center;
  }
 
  .body {
    margin-top: 100px;
  }
+
 img.taxifylogo{
   float: left;
 }
@@ -34,8 +32,38 @@ img.taxifylogo{
   margin-top: 10px;
   margin-left: 50px;
 }
+
 .header{
   color: white;
   float: right;
   margin-right: 40px;
+}
+
+.col-xs-3{
+  text-align: center;
+}
+
+.lead{
+  text-align: center;
+}
+
+#company_name.form-control{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#company_email.form-control{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#company_phone.form-control{
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
