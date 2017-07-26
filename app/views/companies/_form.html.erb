@@ -1,169 +1,183 @@
 <%= form_with(model: company, local: true) do |form| %>
-  <% if company.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
+<% if company.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(company.errors.count, "error") %> prohibited this company from being saved:</h2>
 
-      <ul>
-      <% company.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% company.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
-  <!-- <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id, id: :company_user_id %>
-  </div> -->
+<!-- <div class="field">
+<%= form.label :user_id %>
+<%= form.text_field :user_id, id: :company_user_id %>
+</div> -->
 
-  <div class="field">
-    <p class="lead">Company Name</p>
-    <% form.label :name %>
-    <%= form.text_field :name, id: :company_name, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <p class="lead">Email</p>
-    <% form.label :email %>
-    <%= form.text_field :email, id: :company_email, class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <p class="lead">Phone</p>
-    <% form.label :phone %>
-    <%= form.text_field :phone, id: :company_phone, class: "form-control" %>
-  </div>
-  <br>
-  <br>
-  <p class="lead">What type of company are you?</p>
-<br />
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-        		<div class="row">
-        			<div class="col-xs-3">
-                <%= image_tag("corp.png", :alt => "corplogo", size: "80x80", class:"corplogo") %>
-                <% form.label :corporation %>
-                <p>Corporation</p>
-        				<%= form.check_box :corporation, id: :company_corporation, class:"corpbutton" %>
-        			</div>
-        			<div class="col-xs-3">
-        				<%= image_tag("scorp.png", :alt => "scorplogo", size: "80x80", class:"scorplogo") %>
-                <% form.label :scorp %>
-                <p>S corp</p>
-                <%= form.check_box :scorp, id: :company_scorp %>
-        			</div>
-        			<div class="col-xs-3">
-        				<%= image_tag("llc.png", :alt => "llclogo", size: "80x80", class:"llclogo") %>
-                <% form.label :llc %>
-                 <p>LLC</p>
-                <%= form.check_box :llc, id: :company_llc %>
-        			</div>
-        			<div class="col-xs-3">
-        				<%= image_tag("soleprop.png", :alt => "soleproplogo", size: "80x80", class:"soleproplogo") %>
-                <% form.label :soleprop %>
-                <p>Sole Prop</p>
-                <%= form.check_box :soleprop, id: :company_soleprop %>
-        			</div>
-        		</div>
-        </div>
-    </div>
+<div class="field">
+  <p class="lead">Company Name</p>
+  <% form.label :name %>
+  <%= form.text_field :name, id: :company_name, class: "form-control" %>
 </div>
 
-  <br>
-    <p class="lead">Do you have any partners? (Select all that apply)<p>
+<div class="field">
+  <p class="lead">Email</p>
+  <% form.label :email %>
+  <%= form.text_field :email, id: :company_email, class: "form-control" %>
+</div>
+
+<div class="field">
+  <p class="lead">Phone</p>
+  <% form.label :phone %>
+  <%= form.text_field :phone, id: :company_phone, class: "form-control" %>
+</div>
+<br>
+<br>
+<p class="lead">What type of company are you?</p>
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="row">
+        <div class="col-xs-3">
+          <%= image_tag("corp.png", :alt => "corplogo", size: "80x80", class:"corplogo") %>
+          <% form.label :corporation %>
+          <p>Corporation</p>
+          <%= form.check_box :corporation, id: :company_corporation, class:"corpbutton" %>
+        </div>
+        <div class="col-xs-3">
+          <%= image_tag("scorp.png", :alt => "scorplogo", size: "80x80", class:"scorplogo") %>
+          <% form.label :scorp %>
+          <p>S corp</p>
+          <%= form.check_box :scorp, id: :company_scorp %>
+        </div>
+        <div class="col-xs-3">
+          <%= image_tag("llc.png", :alt => "llclogo", size: "80x80", class:"llclogo") %>
+          <% form.label :llc %>
+          <p>LLC</p>
+          <%= form.check_box :llc, id: :company_llc %>
+        </div>
+        <div class="col-xs-3">
+          <%= image_tag("soleprop.png", :alt => "soleproplogo", size: "80x80", class:"soleproplogo") %>
+          <% form.label :soleprop %>
+          <p>Sole Prop</p>
+          <%= form.check_box :soleprop, id: :company_soleprop %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+<p class="lead">Do you have any partners? (Select all that apply)<p>
   <div class="field">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-md-offset-4">
-            		<div class="row">
-            			<div class="col-sm-4">
-                    <%= image_tag("partners.png", :alt => "partnerspic", size: "80x80", class:"partnerspic") %>
-                    <% form.label :partners %>
-                    <p>Yes, I have partners.</p>
-                    <br>
-                    <%= form.check_box :partners, id: :company_partners %>
-            			</div>
-            			<div class="col-sm-4">
-            				<%= image_tag("manypartners.png", :alt => "manypartners", size: "80x80", class:"manypartners") %>
-                    <% form.label :manypartners %>
-                    <p>I have more than 100 partners.</p>
-                    <%= form.check_box :manypartners, id: :company_manypartners %>
-            			</div>
-            		</div>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-4">
+          <div class="row">
+            <div class="col-sm-4">
+              <%= image_tag("partners.png", :alt => "partnerspic", size: "80x80", class:"partnerspic") %>
+              <% form.label :partners %>
+              <p>Yes, I have partners.</p>
+              <br>
+              <%= form.check_box :partners, id: :company_partners %>
             </div>
+            <div class="col-sm-4">
+              <%= image_tag("manypartners.png", :alt => "manypartners", size: "80x80", class:"manypartners") %>
+              <% form.label :manypartners %>
+              <p>I have more than 100 partners.</p>
+              <%= form.check_box :manypartners, id: :company_manypartners %>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </div>
   <br>
 
-    <p class="lead">Do you have employees? (Select all that apply)</p>
-    <div class="container">
+  <p class="lead">Do you have employees? (Select all that apply)</p>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
-            		<div class="row">
-            			<div class="col-xs-3">
-                    <%= image_tag("employees.png", :alt => "employees", size: "80x80", class:"employees") %>
-                    <% form.label :employees %>
-                    <p>Yes, I have employees.</p>
-                    <%= form.check_box :employees, id: :company_employees %>
-            			</div>
-            			<div class="col-xs-3">
-            				<%= image_tag("benefits.png", :alt => "benefits", size: "80x80", class:"benefits") %>
-                    <% form.label :employeebenefits %>
-                    <p>I offer employee benefits.</p>
-                    <%= form.check_box :employeebenefits, id: :company_employeebenefits %>
-            			</div>
-            			<div class="col-xs-3">
-            				<%= image_tag("contractors.png", :alt => "contractors", size: "80x80", class:"contractors") %>
-                    <% form.label :contractors %>
-                    <p>I have contractors.</p>
-                    <%= form.check_box :contractors, id: :company_contractors %>
-            			</div>
-            			<div class="col-xs-3">
-            				<%= image_tag("agriculture.png", :alt => "agriculture", size: "80x80", class:"agriculture") %>
-                    <% form.label :agriculture %>
-                    <p>I employ agricultural workers.</p>
-                    <%= form.check_box :agriculture, id: :company_agriculture %>
-            			</div>
-            		</div>
-            </div>
+          <div class="col-xs-3">
+            <%= image_tag("employees.png", :alt => "employees", size: "80x80", class:"employees") %>
+            <% form.label :employees %>
+            <p>Yes, I have employees.</p>
+            <%= form.check_box :employees, id: :company_employees %>
+          </div>
+          <div class="col-xs-3">
+            <%= image_tag("benefits.png", :alt => "benefits", size: "80x80", class:"benefits") %>
+            <% form.label :employeebenefits %>
+            <p>I offer employee benefits.</p>
+            <%= form.check_box :employeebenefits, id: :company_employeebenefits %>
+          </div>
+          <div class="col-xs-3">
+            <%= image_tag("contractors.png", :alt => "contractors", size: "80x80", class:"contractors") %>
+            <% form.label :contractors %>
+            <p>I have contractors.</p>
+            <%= form.check_box :contractors, id: :company_contractors %>
+          </div>
+          <div class="col-xs-3">
+            <%= image_tag("agriculture.png", :alt => "agriculture", size: "80x80", class:"agriculture") %>
+            <% form.label :agriculture %>
+            <p>I employ agricultural workers.</p>
+            <%= form.check_box :agriculture, id: :company_agriculture %>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
   <br>
 
-
-  Select all that apply
   <div class="field">
-    <% form.label :incomeproperties %>
-    My company owns income properties.
-    <%= form.check_box :incomeproperties, id: :company_incomeproperties %>
-  </div>
+    <p class="lead">Does your company own any income properties?<p>
+      <label class="switch">
+        <% form.label :incomeproperties %>
+        <%= form.check_box :incomeproperties, id: :company_incomeproperties %>
+        <span class="slider round"></span>
+      </label>
+    </div>
 
-  <div class="field">
-    <% form.label :ff %>
-    My company is in the Farming or Fishing industry.
-    <%= form.check_box :ff, id: :company_ff %>
-  </div>
+    <div class="field">
+      <p class="lead">Is your company in the Farming or Fishing industry?</p>
+      <label class="switch">
+        <% form.label :ff %>
+        <%= form.check_box :ff, id: :company_ff %>
+        <span class="slider round"></span>
+      </label>
+    </div>
 
-  <div class="field">
-    <% form.label :wagering %>
-    My company operates a casino and/or is involved in gambling.
-    <%= form.check_box :wagering, id: :company_wagering %>
-  </div>
-  <div class="field">
-    <% form.label :trucking %>
-    My company owns a vehicle with a taxable gross weight of 55,000 pounds or more.
-    <%= form.check_box :trucking, id: :company_trucking %>
-  </div>
+    <div class="field">
+      <p class="lead">Do you operate a casino or gambling business?</p>
+      <label class="switch">
+        <% form.label :wagering %>
+        <%= form.check_box :wagering, id: :company_wagering %>
+        <span class="slider round"></span>
+      </label>
+    </div>
 
-  <div class="field">
-    <% form.label :excisetax %>
-    Does your company sell any of the following gas, fuel, tractors, air or trip transportation services, insurance policies issued by foreign companies, fishing equipment, electric outdoor motors or bows and arrows, alcohol, tabacco, or firearms?
-    <%= form.check_box :excisetax, id: :company_excisetax %>
-  </div>
+    <div class="field">
+      <p class="lead">Does your company own a vehicle with a taxable gross weight of 55,000 pounds or more?</p>
+      <label class="switch">
+        <% form.label :trucking %>
+        <%= form.check_box :trucking, id: :company_trucking %>
+        <span class="slider round"></span>
+      </label>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+    <div class="field">
+      <p class="lead">Does your company sell any of the following gas, fuel, tractors, air or trip transportation services, insurance policies issued by foreign companies, fishing equipment, electric outdoor motors or bows and arrows, alcohol, tabacco, or firearms?</p>
+      <label class="switch">
+        <% form.label :excisetax %>
+        <%= form.check_box :excisetax, id: :company_excisetax %>
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="actions">
+      <%= form.submit %>
+    </div>
+    <% end %>
