@@ -3,7 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .jumbotron {
-  // margin: 1em;.
+  max-width: 500px;
+  background-color: #f0f8ff;
+  box-shadow: 5px 4px 4px #d4d4d4;
 }
 
 .create {
@@ -14,4 +16,24 @@
   border: solid;
   max-width: 300px;
   max-height: 150px;
+}
+.companiesheader{
+  font-family: helvetica;
+  font-weight: 200;
+  font-size: 30px;
+  padding: 3px;
+
+}
+.bizowner{
+  padding: 60px;
+}
+
+.space{
+  padding: 30px;
+}
+
+.companynames{
+  font-family: helvetica;
+  font-weight: 200;
+  font-size: 36px;
 }

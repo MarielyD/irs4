@@ -1,18 +1,29 @@
 <p id="notice"><%= notice %></p>
+  <div class="bizowner">
+   <%= image_tag("owner.png", :alt => "ownerlogo", size: "290x220", class:"ownerlogo") %>
+ </div>
+   <p class="companiesheader"> Spend less time worrying about taxes</p>
+   <p class="companiesheader">  and more time building your business.</p>
+   <br>
+   <br>
+    <%= link_to 'Create a new company', new_company_path, class:"btn btn-primary btn-lg" %>
+    <div class="space"></div>
 
-<div class="row">
-  <div class="container jumbotron create ">
-    <%= link_to 'Create a new company', new_company_path %>
-  </div>
-</div>
-<div class="row">
+
+
+ <div class="row">
   <% @companies.each do |company| %>
-  <div class="container jumbotron">
+   <div class="container jumbotron">
 
-    <p>Company: <%= company.name %></p>
-    <%= link_to 'Show', company %>
-    <%= link_to 'Edit', edit_company_path(company) %>
-    <%= link_to 'Destroy', company, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <!-- <p>Company</p> -->
+    <!-- <hr> -->
+    <p class="companynames"><%= company.name %></p>
+      <!-- <hr> -->
+    <!-- <br> -->
+    <%= link_to 'Show', company, class: 'btn btn-success btn-xs' %>
+    <%= link_to 'Edit', edit_company_path(company), class: 'btn btn-info btn-xs' %>
+    <%= link_to 'Destroy', company, method: :delete,class: 'btn btn-danger btn-xs', data: { confirm: 'Are you sure?' } %>
 
 
     <table>
@@ -70,11 +81,6 @@
         <% end %>
       </tbody>
     </table>
-
   </div>
-  <% end %>
-</div>
-
-<div class="container">
-
+ <% end %>
 </div>

@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+test_form = Form.create(name: "test_1", taxform: "test_1", url: "https://www.irs.gov/pub/irs-pdf/f730.pdf", due: "20170810", message: "14 Days email reminder")
+test_form2 = Form.create(name: "test_2", taxform: "test_2", url: "https://www.irs.gov/pub/irs-pdf/f2290.pdf", due: "20170104", message: "14 Days email reminder")
 
 f1 = Form.create(name: "730-1", taxform: "730", url: "https://www.irs.gov/pub/irs-pdf/f730.pdf", due: "20170104", message: "Fill out this form")
 f2 = Form.create(name: "2290-1", taxform: "2290", url: "https://www.irs.gov/pub/irs-pdf/f2290.pdf", due: "20170104", message: "WHEN YOU REGISTER A TRUCK FOR THE 1ST TIME")

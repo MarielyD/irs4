@@ -6,12 +6,6 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.follow_up.subject
   #
 
-    def follow_up(email, name)
-      @greeting = "Welcome to Taxify"
-      @name = name
-      mail to: email
-    end
-
 
   def mail_reminder_action(form)
     form.companies.each do
@@ -21,6 +15,13 @@ class UserMailer < ApplicationMailer
     if company.forms.map(&:id).include? form_id
         mailto(to:company.email, subject: "14 Day Reminder for form #{form.taxform}")
     else
+
+  default :from => "noreply@taxifyapp.com"
+
+  def follow_up(email, name)
+    @greeting = "Hi"
+    @name = name
+    mail to: email
 
   end
 
