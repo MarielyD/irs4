@@ -5,9 +5,34 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.follow_up.subject
   #
-  def follow_up(email, name)
-    @greeting = "WAZZZZZAAAAAAAAAAAAAAAAAAAP"
-    @name = name
-    mail to: email
+
+    def follow_up(email, name)
+      @greeting = "Welcome to Taxify"
+      @name = name
+      mail to: email
+    end
+
+
+  def mail_reminder_action(form)
+    form.companies.each do
+
+    form_id = form.id
+    Company.all.each do |company|
+    if company.forms.map(&:id).include? form_id
+        mailto(to:company.email, subject: "14 Day Reminder for form #{form.taxform}")
+    else
+
   end
+
+
+  def mail_reminder_last_action(form)
+    a = form.id
+    Company.each do |company|
+    if company.form.find(a)
+        mailto(to:company.email, subject: "#{form.taxform} is due tomorrow")
+    else
+
+  end
+
+
 end
