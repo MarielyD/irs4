@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
+  <div class="bizowner">
+   <%= image_tag("owner.png", :alt => "ownerlogo", size: "290x220", class:"ownerlogo") %>
+ </div>
+   <p class="companiesheader"> Spend less time worrying about taxes</p>
+   <p class="companiesheader">  and more time building your business.</p>
+   <br>
+   <br>
+    <%= link_to 'Create a new company', new_company_path, class:"btn btn-primary btn-lg" %>
 
 <div class="row">
-  <div class="container jumbotron create ">
-    <%= link_to 'Create a new company', new_company_path %>
-  </div>
-</div>
-<div class="row">
   <% @companies.each do |company| %>
-  <div class="container jumbotron">
+
 
     <p>Company: <%= company.name %></p>
     <%= link_to 'Show', company %>
@@ -71,10 +74,6 @@
       </tbody>
     </table>
 
-  </div>
+
   <% end %>
-</div>
-
-<div class="container">
-
 </div>
