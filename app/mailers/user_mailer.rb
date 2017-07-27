@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
   #   en.user_mailer.follow_up.subject
   #
   def follow_up(email, name)
-    @greeting = "WAZZZZZAAAAAAAAAAAAAAAAAAAP"
+    @greeting = "Hi"
     @name = name
     mail to: email
   end
