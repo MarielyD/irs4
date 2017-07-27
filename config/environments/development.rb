@@ -32,10 +32,14 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.smtp_settings = {
-    address: 'localhost',
-    port: 1025
+    port: 587,
+    address: 'smtp.mailgun.org',
+    user_name: 'postmaster@sandbox60d8813551e54465bcb677a1ef6ade06.mailgun.org',
+    password: '0e4f3dd4fcd26aa9f260498f912fdba0',
+    domain: 'sandbox60d8813551e54465bcb677a1ef6ade06.mailgun.org',
+    authentication: :plain,
   }
-  
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
