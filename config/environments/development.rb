@@ -35,8 +35,8 @@ Rails.application.configure do
     port: 587,
     address: 'smtp.sendgrid.net',
     user_name: 'apikey',
-    password: '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',
-    domain: 'app73774148@heroku.com',
+    password: ENV['SEND_GRID_PASSWORD'],
+    domain: ENV['SEND_GRID_DOMAIN'],
     authentication: :plain
   }
 
