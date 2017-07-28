@@ -33,10 +33,10 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
     port: 587,
-    address: 'smtp.mailgun.org',
-    user_name: 'postmaster@sandbox60d8813551e54465bcb677a1ef6ade06.mailgun.org',
-    password: '0e4f3dd4fcd26aa9f260498f912fdba0',
-    domain: 'sandbox60d8813551e54465bcb677a1ef6ade06.mailgun.org',
+    address: 'smtp.sendgrid.net',
+    user_name: 'apikey',
+    password: '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',
+    domain: 'app73774148@heroku.com',
     authentication: :plain
   }
 
