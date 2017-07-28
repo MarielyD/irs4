@@ -49,6 +49,10 @@ group :development, :test do
   gem 'faker'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
@@ -63,4 +67,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'resque'
 gem 'resque-scheduler'
-gem 'mailcatcher'
+# gem 'mailcatcher'
