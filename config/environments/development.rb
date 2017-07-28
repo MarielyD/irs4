@@ -37,7 +37,7 @@ Rails.application.configure do
     user_name: 'postmaster@sandbox60d8813551e54465bcb677a1ef6ade06.mailgun.org',
     password: '0e4f3dd4fcd26aa9f260498f912fdba0',
     domain: 'sandbox60d8813551e54465bcb677a1ef6ade06.mailgun.org',
-    authentication: :plain,
+    authentication: :plain
   }
 
   # Print deprecation notices to the Rails logger.
