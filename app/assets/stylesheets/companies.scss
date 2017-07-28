@@ -16,7 +16,7 @@
   font-weight: 200;
   font-size: 30px;
   padding: 3px;
-
+  color: #ff603d;
 }
 .bizowner{
   padding: 60px;
@@ -39,4 +39,25 @@
 
 .companybuttons{
   text-align: right;
+}
+
+table.table.table-striped{
+  max-width: 700px;
+  margin: auto;
+}
+
+.showpage{
+  max-width: 600px;
+}
+
+.list-group{
+  max-width: 500px;
+  margin: auto;
+}
+
+div.calendar-heading{
+  font-family: helvetica;
+  font-weight: 200;
+  font-size: 24px;
+  color: #ff603d;
 }

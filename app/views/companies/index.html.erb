@@ -13,7 +13,7 @@
 <br>
 <div class="row1">
   <% @companies.each do |company| %>
-  <p class="companynames"><%= company.name %></p>
+  <p class="companynames"><%= company.name.capitalize %></p>
   <div class="companybuttons">
     <%= link_to 'View', company, class: 'btn btn-success btn-sm' %>
     <%= link_to 'Edit', edit_company_path(company), class: 'btn btn-info btn-sm' %>

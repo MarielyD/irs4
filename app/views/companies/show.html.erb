@@ -1,145 +1,178 @@
 <p id="notice"><%= notice %></p>
 
-<!-- <p>
-  <strong>User:</strong>
-  <%= @company.user.username %>
-</p> -->
-
-<p>
-  <strong>Company Name:</strong>
-  <%= @company.name %>
+<p class="companiesheader">
+  <%= @company.name.capitalize %>
 </p>
+<br>
+<ul class="list-group">
+  <li class="list-group-item">
+    <p>
+      <strong>Email:</strong>
+      <%= @company.email %>
+    </p>
+  </li>
+  <li class="list-group-item">
+    <p>
+      <strong>Phone:</strong>
+      <%= @company.phone %>
+    </p>
+  </li>
 
-<p>
-  <strong>Email:</strong>
-  <%= @company.email %>
-</p>
+  <% if @company.corporation %>
+  <li class="list-group-item">
+    <p>
+      <strong>Company Type:</strong>
+      Corporation
+    </p>
+  </li>
+  <% end %>
 
-<p>
-  <strong>Phone:</strong>
-  <%= @company.phone %>
-</p>
 
-<% if @company.corporation %>
-<p>
-  <strong>Corporation</strong>
-  <!-- <%= @company.corporation %> -->
-</p>
-<% end %>
+  <% if @company.scorp %>
+  <li class="list-group-item">
+    <p>
+      <strong>Company Type:</strong>
+      S Corp
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.scorp %>
-<p>
-  <strong>S Corp</strong>
-  <!-- <%= @company.scorp %> -->
-</p>
-<% end %>
 
-<% if @company.llc %>
-<p>
-  <strong>LLC</strong>
-  <!-- <%= @company.llc %> -->
-</p>
-<% end %>
+  <% if @company.llc %>
+  <li class="list-group-item">
+    <p>
+      <strong>Company Type:</strong>
+      LLC
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.soleprop %>
-<p>
-  <strong>Sole Prop</strong>
-  <!-- <%= @company.soleprop %> -->
-</p>
-<% end %>
 
-<% if @company.partners %>
-<p>
-  <strong>Partners: </strong>
-  Yes
-  <!-- <%= @company.partners %> -->
-</p>
-<% end %>
+  <% if @company.soleprop %>
+  <li class="list-group-item">
+    <p>
+      <strong>Company Type:</strong>
+      Sole Prop
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.manypartners %>
-<p>
-  <strong>More than 100 partners: </strong>
-  Yes
-  <!-- <%= @company.manypartners %> -->
-</p>
-<% end %>
 
-<% if @company.employees %>
-<p>
-  <strong>Employees:</strong>
-  Yes
-  <!-- <%= @company.employees %> -->
-</p>
-<% end %>
+  <% if @company.partners %>
+  <li class="list-group-item">
+    <p>
+      <strong>Partners: </strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.employeebenefits %>
-<p>
-  <strong>Employee Benefits:</strong>
-  Yes
-  <!-- <%= @company.employeebenefits %> -->
-</p>
-<% end %>
 
-<% if @company.contractors %>
-<p>
-  <strong>Contractors:</strong>
-  Yes
-  <!-- <%= @company.contractors %> -->
-</p>
-<% end %>
+  <% if @company.manypartners %>
+  <li class="list-group-item">
+    <p>
+      <strong>More than 100 partners: </strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.agriculture %>
-<p>
-  <strong>Agriculture Employees:</strong>
-  Yes
-  <!-- <%= @company.agriculture %> -->
-</p>
-<% end %>
 
-<% if @company.incomeproperties %>
-<p>
-  <strong>Income Properties:</strong>
-  Yes
-  <!-- <%= @company.incomeproperties %> -->
-</p>
-<% end %>
+  <% if @company.employees %>
+  <li class="list-group-item">
+    <p>
+      <strong>Employees:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.ff %>
-<p>
-  <strong>Fishing and Farming:</strong>
-  Yes
-  <!-- <%= @company.ff %> -->
-</p>
-<% end %>
 
-<% if @company.wagering %>
-<p>
-  <strong>Casino and Gambling:</strong>
-  Yes
-  <!-- <%= @company.wagering %> -->
-</p>
-<% end %>
+  <% if @company.employeebenefits %>
+  <li class="list-group-item">
+    <p>
+      <strong>Employee Benefits:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.trucking %>
-<p>
-  <strong>Vehicle with gross weight of 55,000 or more:</strong>
-  Yes
-  <!-- <%= @company.trucking %> -->
-</p>
-<% end %>
+  <% if @company.contractors %>
+  <li class="list-group-item">
+    <p>
+      <strong>Contractors:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
 
-<% if @company.excisetax %>
-<p>
-  <strong>Excise Tax:</strong>
-  Yes
-  <!-- <%= @company.excisetax %> -->
-</p>
-<% end %>
-<%= link_to 'Edit My Info', edit_company_path(@company), class: 'btn btn-info btn-sm' %>
+
+  <% if @company.agriculture %>
+  <li class="list-group-item">
+    <p>
+      <strong>Agriculture Employees:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
+
+
+  <% if @company.incomeproperties %>
+  <li class="list-group-item">
+    <p>
+      <strong>Income Properties:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
+
+
+  <% if @company.ff %>
+  <li class="list-group-item">
+    <p>
+      <strong>Fishing and Farming:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
+
+
+  <% if @company.wagering %>
+  <li class="list-group-item">
+    <p>
+      <strong>Casino and Gambling:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
+
+
+  <% if @company.trucking %>
+  <li class="list-group-item">
+    <p>
+      <strong>Vehicle with gross weight of 55,000 or more:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
+
+
+  <% if @company.excisetax %>
+  <li class="list-group-item">
+    <p>
+      <strong>Excise Tax:</strong>
+      Yes
+    </p>
+  </li>
+  <% end %>
+</ul>
+<br>
+
+<%= link_to 'Edit My Info', edit_company_path(@company), class: "btn btn-primary btn-mini" %>
 <div class="space"></div>
 
 <%= month_calendar do |date| %>
-  <%= date %>
+<%= date %>
 <% end %>
 
 <%= link_to 'Back', companies_path %>
