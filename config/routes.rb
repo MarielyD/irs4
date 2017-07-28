@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+
   resources :companies
   root 'sessions#new'
   delete '/logout',  to: 'sessions#destroy'
+  get 'users/calendar'
 
   get 'users/new'
 
