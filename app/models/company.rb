@@ -1,6 +1,6 @@
 class Company < ApplicationRecord
   belongs_to :user
-  has_many :company_forms
+  has_many :company_forms,  :dependent => :delete_all
   has_many :forms, :through => :company_forms
 
   after_save :delete_duplicate
