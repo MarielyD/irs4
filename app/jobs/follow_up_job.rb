@@ -1,5 +1,6 @@
 class FollowUpJob < ApplicationJob
   queue_as :email
+  include Que::Mailer
 
   def perform(email, name)
     # Do something later
