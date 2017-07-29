@@ -26,7 +26,6 @@ class CompaniesController < ApplicationController
   # POST /companies.json
   def create
     @company = current_user.companies.new(company_params)
-    form_allocation(@company)
     respond_to do |format|
       if @company.save!
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
@@ -45,7 +44,7 @@ class CompaniesController < ApplicationController
   def update
     respond_to do |format|
       if @company.update(company_params)
-        form_allocation(@company)
+        # form_allocation(@company)
         format.html { redirect_to @company, notice: 'Company was successfully updated.' }
         format.json { render :show, status: :ok, location: @company }
       else
