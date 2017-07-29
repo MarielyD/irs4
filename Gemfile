@@ -34,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-ui-rails', '~> 5.0.5'
+gem 'intercom-rails'
 
 
 # Use Capistrano for deployment

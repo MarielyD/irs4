@@ -17,9 +17,6 @@
 
 
 
-
-
-
 $( document ).on('turbolinks:load', function() {
   console.log("It works on each visit!");
   $(".radio-function").change(function() {
