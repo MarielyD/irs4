@@ -106,6 +106,13 @@ GEM
     pg (0.21.0)
     public_suffix (2.0.5)
     puma (3.9.1)
+    que (0.13.1)
+    que_mailer (0.0.2)
+      actionmailer (>= 4.0)
+      activesupport (>= 4.0)
+      pg (~> 0)
+      que (~> 0.6)
+      rails (>= 4.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -254,6 +261,8 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   pg
   puma (~> 3.7)
+  que
+  que_mailer
   rails (~> 5.1.2)
   rails_12factor
   resque

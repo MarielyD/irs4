@@ -70,3 +70,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'resque'
 gem 'resque-scheduler'
 # gem 'mailcatcher'
+gem 'que'
+gem 'que_mailer'
