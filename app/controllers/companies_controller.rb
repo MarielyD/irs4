@@ -32,7 +32,6 @@ class CompaniesController < ApplicationController
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
         FollowUpJob.new(@company.email, current_user.username).enqueue
-        UserMailer.follow_up(email, name).deliver_now
 
       else
         format.html { render :new }
