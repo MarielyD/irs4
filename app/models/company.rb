@@ -3,7 +3,7 @@ class Company < ApplicationRecord
   has_many :company_forms, :dependent => :destroy
   has_many :forms, :through => :company_forms
 
-  # after_save :delete_duplicate
+
   after_save :allocate_forms
 
   private
