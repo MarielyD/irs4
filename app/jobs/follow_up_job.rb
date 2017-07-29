@@ -3,7 +3,7 @@ class FollowUpJob < ApplicationJob
 
   def perform(email, name)
     # Do something later
-    UserMailer.follow_up(email, name).deliver_now
+    UserMailer.follow_up(email, name).deliver
     p "<>"*20
     p "email sent"
   end
