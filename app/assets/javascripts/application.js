@@ -11,5 +11,19 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery
 //= require turbolinks
 //= require_tree .
+
+
+
+
+
+
+$( document ).on('turbolinks:load', function() {
+  console.log("It works on each visit!");
+  $(".radio-function").change(function() {
+    $(".radio-function").prop('checked', false);
+    $(this).prop('checked', true);
+});
+})

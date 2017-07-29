@@ -45,25 +45,25 @@
           <%= image_tag("corp.png", :alt => "corplogo", size: "80x80", class:"corplogo") %>
           <% form.label :corporation %>
           <p>Corporation</p>
-          <%= form.check_box :corporation, id: :company_corporation, class:"corpbutton" %>
+          <%= form.check_box :corporation, id: :company_corporation, class:"corpbutton radio-function" %>
         </div>
         <div class="col-xs-3">
           <%= image_tag("scorp.png", :alt => "scorplogo", size: "80x80", class:"scorplogo") %>
           <% form.label :scorp %>
           <p>S corp</p>
-          <%= form.check_box :scorp, id: :company_scorp %>
+          <%= form.check_box :scorp, id: :company_scorp, class:"radio-function" %>
         </div>
         <div class="col-xs-3">
           <%= image_tag("llc.png", :alt => "llclogo", size: "80x80", class:"llclogo") %>
           <% form.label :llc %>
           <p>LLC</p>
-          <%= form.check_box :llc, id: :company_llc %>
+          <%= form.check_box :llc, id: :company_llc , class: "radio-function" %>
         </div>
         <div class="col-xs-3">
           <%= image_tag("soleprop.png", :alt => "soleproplogo", size: "80x80", class:"soleproplogo") %>
           <% form.label :soleprop %>
           <p>Sole Prop</p>
-          <%= form.check_box :soleprop, id: :company_soleprop %>
+          <%= form.check_box :soleprop, id: :company_soleprop, class: "radio-function" %>
         </div>
       </div>
     </div>

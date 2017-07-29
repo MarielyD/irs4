@@ -32,12 +32,12 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
   config.action_mailer.smtp_settings = {
-    port: 587,
-    address: 'smtp.sendgrid.net',
-    user_name: apikey,
-    password: ENV['SEND_GRID_PASSWORD'],
-    domain: ENV['SEND_GRID_DOMAIN'],
-    authentication: :plain
+    # port: 587,
+    # address: 'smtp.sendgrid.net',
+    # user_name: 'apikey',
+    # password: ENV['SEND_GRID_PASSWORD'],
+    # domain: ENV['SEND_GRID_DOMAIN'],
+    # authentication: :plain
   }
 
   # Print deprecation notices to the Rails logger.
