@@ -169,13 +169,9 @@
 
 <%= month_calendar events: @company.forms do |date, forms| %>
   <%= date %>
-
   <% forms.each do |form| %>
-    <div>
+    <div class="calendarlink">
       <%= link_to form.name, form.url, target: '_blank'%>
     </div>
   <% end %>
 <% end %>
-
-
-<%= link_to 'Back', companies_path %>
