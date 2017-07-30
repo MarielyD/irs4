@@ -39,7 +39,7 @@ class Company < ApplicationRecord
     forms = []
 
     partnerform = ["7004-2", "7004-1", "1120 W-1", "1120 W-2", "1120 W-3"]
-    if company.scorp
+    if company.corporation
       unless forms.include? Form.find_by(name: "1120 W-1")
         partnerform.each do |n|
           forms << Form.find_by(name: n)

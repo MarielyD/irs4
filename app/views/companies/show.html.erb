@@ -166,8 +166,15 @@
 <%= link_to 'Edit My Info', edit_company_path(@company), class: "btn btn-primary btn-mini" %>
 <div class="space"></div>
 
-<%= month_calendar do |date| %>
-<%= date %>
+
+<%= month_calendar events: @company.forms do |date, forms| %>
+  <%= date %>
+
+  <% forms.each do |form| %>
+    <div>
+      <%= link_to form.name, form.url, target: '_blank'%>
+    </div>
+  <% end %>
 <% end %>
 
 

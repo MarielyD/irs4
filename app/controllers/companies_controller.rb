@@ -64,7 +64,19 @@ class CompaniesController < ApplicationController
     end
   end
 
+  def show
+  @company = current_user.companies.find(params[:id])
+  @company.forms
+end
 
+def start_time
+    created_at
+  end
+
+  def calendar_view
+    @company = current_user.companies.find(params[:id])
+    @company.forms.all
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
