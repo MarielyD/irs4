@@ -17,7 +17,9 @@
     <nav class="nav navbar navbar-default navbar-fixed-top">
       <div class="container-header">
         <%= link_to image_tag("traxlogowhite.png", :alt => "traxlogo", size: "70x27", class:"traxlogo"), companies_path %>
+
         <%= link_to 'Log out', root_url, :class => "header" %>
+        <%= link_to 'Home', companies_path, :class => "header" %>
       </div>
     </nav>
     <div class="container body">
