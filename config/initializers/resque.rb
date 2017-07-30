@@ -1,4 +1,4 @@
-Resque.redis = ENV['REDIS_URL']
+# Resque.redis = ENV['REDIS_URL']
 
 # optional
 # Resque.after_fork = Proc.new {

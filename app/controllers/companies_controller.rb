@@ -28,9 +28,10 @@ class CompaniesController < ApplicationController
     @company = current_user.companies.new(company_params)
     respond_to do |format|
       if @company.save!
+        # FollowUpJob.new(@company.email, current_user.username).enqueue
+        UserMailer.follow_up(@company.email, current_user.username).deliver_now
         format.html { redirect_to @company, notice: 'Company was successfully created.' }
         format.json { render :show, status: :created, location: @company }
-        FollowUpJob.new(@company.email, current_user.username).enqueue
 
       else
         format.html { render :new }
@@ -45,6 +46,7 @@ class CompaniesController < ApplicationController
     respond_to do |format|
       if @company.update(company_params)
         # form_allocation(@company)
+        UserMailer.follow_up(@company.email, current_user.username).deliver_now
         format.html { redirect_to @company, notice: 'Company was successfully updated.' }
         format.json { render :show, status: :ok, location: @company }
       else
