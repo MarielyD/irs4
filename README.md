@@ -1,26 +1,37 @@
 # README
-
+Trax
 Wyncode final project, an application using a cutom matching algorithim to help businesses with taxes so that they never miss a deadline.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Code Example
 
-Things you may want to cover:
+ def form_allocation_corporation(company)
+    forms = []
 
-* Ruby version
+    partnerform = ["7004-2", "7004-1", "1120 W-1", "1120 W-2", "1120 W-3"]
+    if company.corporation
+      unless forms.include? Form.find_by(name: "1120 W-1")
+        partnerform.each do |n|
+          forms << Form.find_by(name: n)
+        end
+      end
+    else
+      if forms.include? Form.find_by(name: "1120 W-1")
+        partnerform.each do |n|
+          forms.delete(Form.find_by(name: n))
+        end
+      end
+    end
 
-* System dependencies
+    forms
+  end
 
-* Configuration
+Motivation
+We we're motivated by our team member, she is a small business owner and wanted to kepp track of her tax deadlines.
 
-* Database creation
+Installation
 
-* Database initialization
+gem intall simple calendar
 
-* How to run the test suite
+Contributors
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Stefani Paulinelli, Michael Braun, Mariely De la Cruz
