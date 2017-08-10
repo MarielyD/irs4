@@ -1,6 +1,6 @@
 # README
 
-Wyncode final project, an application using a cutom matching algorithim to help businesses with taxes so that they never miss a dealine.
+Wyncode final project, an application using a cutom matching algorithim to help businesses with taxes so that they never miss a deadline.
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
