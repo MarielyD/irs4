@@ -1,5 +1,6 @@
 # README
 Trax
+
 Wyncode final project, an application using a cutom matching algorithim to help businesses with taxes so that they never miss a deadline.
 
 Code Example
@@ -26,6 +27,7 @@ Code Example
   end
 
 Motivation
+
 We we're motivated by our team member, she is a small business owner and wanted to kepp track of her tax deadlines.
 
 Installation
